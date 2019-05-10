@@ -1,0 +1,143 @@
+.chatBody {
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  padding: 10px;
+}
+
+.child {
+  box-sizing: border-box;
+  height: 320px;
+  width: 33%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+}
+
+.left {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  font-family: cursive;
+}
+
+.msg::-webkit-input-placeholder {
+  padding-left: 75px;
+  font-size: 14px;
+}
+
+.chat {
+  margin: auto;
+  width: 1000px;
+  height: 1000px;
+}
+
+.mid {
+  width: 200px;
+  height: 24px;
+}
+
+input::placeholder {
+  font-family: 'FontAwesome';
+}
+
+.msg {
+  background: #eee;
+  width: 100%;
+  height: 24px;
+  font-size: 12px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
+}
+
+.but1 {
+  border-style: initial;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+  font-size: 12px;
+  background: #fff;
+  color: #2a52be;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+
+.right {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.image-upload > input {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+.image-upload {
+  width: 30px;
+  height: 30px;
+}
+
+.far {
+  transform: scale(2, 2);
+  color: #aaa;
+  cursor: pointer;
+}
+
+.child:hover {
+  transform: scale(1.15);
+}
+
+.larger {
+  width: 100%;
+  height: 100%;
+}
+
+.infoc {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 400px;
+  height: 500px;
+  float: right;
+}
+
+.p {
+  text-align: center;
+  color: #2a52be;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.uuu {
+  margin: auto;
+}
+
+textarea,
+button,
+input {
+  outline: none;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}

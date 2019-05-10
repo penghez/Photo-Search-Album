@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Photo search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="./assets/js/annexFunctions.js"></script>
+  </head>
+
+  <body>
+    <div class="chat">
+      <nav class="nav">
+        <div class="left">photo search</div>
+        <div class="mid">
+          <input
+            class="msg"
+            placeholder="Search"
+            onkeypress="enterPress(event)"
+          />
+        </div>
+        <div class="right">
+          <div class="image-upload">
+            <label for="upload_file">
+              <i class="far fa-file-image"></i>
+            </label>
+            <input
+              id="upload_file"
+              class="upload"
+              accept="image/*"
+              name="img"
+              type="file"
+            />
+          </div>
+          <button class="but1" onclick="upload()">Upload</button>
+        </div>
+      </nav>
+
+      <hr style="margin: 10px 0" />
+
+      <div class="chatBody">
+        <div id="modal01" class="w3-modal">
+          <span
+            class="w3-button w3-hover-red w3-xlarge w3-display-topright"
+            onclick="modalClick()"
+            >&times;</span
+          >
+          <div
+            class="w3-modal-content w3-animate-zoom"
+            style="width:600px; height:600px"
+          >
+            <img id="img01" class="larger" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
