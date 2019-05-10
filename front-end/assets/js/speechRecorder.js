@@ -7,25 +7,15 @@ function startRecord() {
       setTimeout(function() {
         rec.stop(
           function(blob, duration) {
-            // console.log(
-            //   URL.createObjectURL(blob),
-            //   'Duration:' + duration + 'ms'
-            // );
-            console.log(blob);
             rec.close();
 
             uploadToS3(blob);
-            // var audio = document.createElement('audio');
-            // audio.controls = true;
-            // document.body.appendChild(audio);
-            // audio.src = URL.createObjectURL(blob);
-            // audio.play();
           },
           function(msg) {
             console.log('Failed recording:' + msg);
           }
         );
-      }, 3000);
+      }, 1000);
     },
     function(msg, isUserNotAllow) {
       console.log(
@@ -36,20 +26,37 @@ function startRecord() {
 }
 
 function uploadToS3(blob) {
-  const formData = new FormData();
-  formData.append('file', blob, 'speech.mp3');
-  axios({
-    method: 'post',
-    url: 'https://qi0iw785k2.execute-api.us-east-2.amazonaws.com/v1/',
-    data: formData,
+  var ID =
+    new Date().getTime().toString() +
+    Math.random()
+      .toString(36)
+      .substr(2, 9);
+  var file = new File([blob], ID + '.mp3');
+  console.log(file);
+  var audio = document.createElement('audio');
+  audio.controls = true;
+  document.getElementById('speech').innerHTML = '';
+  document.getElementById('speech').appendChild(audio);
+  audio.src = URL.createObjectURL(file);
+
+  let config = {
     headers: {
-      'Content-Type': 'multipart/form-data'
+      'Content-Type': 'audio/mpeg',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': '*',
+      'Access-Control-Allow-Headers': '*'
     }
-  })
-    .then(res => {
-      console.log(res);
+  };
+  axios
+    .put(
+      'https://o42g54ee0k.execute-api.us-east-1.amazonaws.com/v1',
+      file,
+      config
+    )
+    .then(response => {
+      console.log(response);
     })
-    .catch(err => {
-      console.log(err);
+    .catch(error => {
+      console.log(error);
     });
 }
