@@ -45,7 +45,7 @@
 }
 
 .mid {
-  width: 200px;
+  width: 340px;
   height: 24px;
 }
 
@@ -55,26 +55,32 @@ input::placeholder {
 
 .msg {
   background: #eee;
-  width: 100%;
-  height: 24px;
+  width: 80%;
+  height: 30px;
   font-size: 12px;
   border-radius: 3px;
   border-style: solid;
   border-width: 1px;
   border-color: #ddd;
+  text-align: left;
 }
 
 .but1 {
   border-style: initial;
   cursor: pointer;
-  width: 50px;
+  width: 60px;
   height: 30px;
-  font-size: 12px;
+  text-align: center;
+  font-size: 14px;
   background: #fff;
   color: #2a52be;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
+}
+
+.but1:hover {
+  background: #aaa;
 }
 
 .right {
@@ -98,9 +104,12 @@ input::placeholder {
 }
 
 .far {
-  transform: scale(2, 2);
+  transform: scale(2.5, 2.5);
   color: #aaa;
   cursor: pointer;
+}
+.far:hover {
+  color: #2a52be;
 }
 
 .child:hover {
@@ -128,8 +137,8 @@ input::placeholder {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.uuu {
-  margin: auto;
+.uploadStyle:hover {
+  background: #aaa;
 }
 
 textarea,

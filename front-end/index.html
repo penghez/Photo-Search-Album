@@ -17,19 +17,28 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <script src="./assets/js/annexFunctions.js"></script>
+    <script src="./assets/js/psaFunctions.js"></script>
+    <script src="./assets/js/recorder.mp3.min.js"></script>
+    <script src="./assets/js/speechRecorder.js"></script>
   </head>
 
   <body>
     <div class="chat">
       <nav class="nav">
-        <div class="left">photo search</div>
+        <div
+          class="left"
+          style="font-family: Arial, Helvetica, sans-serif; font-size: 20px"
+        >
+          Photo Search Album
+        </div>
         <div class="mid">
           <input
             class="msg"
             placeholder="Search"
             onkeypress="enterPress(event)"
           />
+
+          <button class="but1" onclick="startRecord()">Record</button>
         </div>
         <div class="right">
           <div class="image-upload">
@@ -47,7 +56,6 @@
           <button class="but1" onclick="upload()">Upload</button>
         </div>
       </nav>
-
       <hr style="margin: 10px 0" />
 
       <div class="chatBody">
@@ -55,12 +63,9 @@
           <span
             class="w3-button w3-hover-red w3-xlarge w3-display-topright"
             onclick="modalClick()"
-            >&times;</span
+            >CLOSE</span
           >
-          <div
-            class="w3-modal-content w3-animate-zoom"
-            style="width:600px; height:600px"
-          >
+          <div class="w3-modal-content w3-animate-zoom">
             <img id="img01" class="larger" />
           </div>
         </div>
