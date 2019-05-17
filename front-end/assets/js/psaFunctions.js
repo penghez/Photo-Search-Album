@@ -30,7 +30,7 @@ function onClick(element) {
 
 function upload() {
   var file = document.getElementById('upload_file').files[0];
-  // console.log(file);
+  console.log(file);
   var ID =
     new Date().getTime().toString() +
     Math.random()
@@ -59,16 +59,10 @@ function upload() {
     .catch(error => {
       console.log(error);
     });
-
-  // axios
-  //   .put('https://o42g54ee0k.execute-api.us-east-1.amazonaws.com/v1', file, {
-  //     headers: { 'Content-Type': 'image/jpeg' }
-  //   })
-  //   .then(res => console.log(res))
-  //   .catch(err => console.log(err));
 }
 
 function search(msg) {
+  console.log(msg);
   axios
     .get('https://o42g54ee0k.execute-api.us-east-1.amazonaws.com/v1', {
       params: {
@@ -99,8 +93,14 @@ function addImage(name) {
   img.setAttribute('src', '' + name);
   img.setAttribute('onclick', 'onClick(this)');
   img.setAttribute('height', '80%');
+  img.setAttribute('onerror', 'imgError(this)');
   var chatArea = $('.chatBody');
+
   chatArea.append(img);
+}
+
+function imgError(image) {
+  $(image).hide();
 }
 
 function sendMessage() {

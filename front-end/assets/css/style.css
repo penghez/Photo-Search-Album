@@ -83,6 +83,24 @@ input::placeholder {
   background: #aaa;
 }
 
+.but2 {
+  border-style: initial;
+  cursor: pointer;
+  width: 260px;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+  color: #2a52be;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+
+.but2:hover {
+  background: #aaa;
+}
+
 .right {
   width: 200px;
   height: 30px;

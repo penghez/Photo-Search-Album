@@ -26,6 +26,10 @@ Snapshot:
 
 ![snapshot](./imgs/snapshot.png)
 
+Snapshot 2 (Record):
+
+![snapshot](./imgs/snapshot2.png)
+
 ANNEX:
 
 ![ANNEX](./imgs/ANNEX.png)
