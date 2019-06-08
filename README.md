@@ -16,7 +16,7 @@ Hang Yin (hy2568)
 
 ## URL
 
->https://s3.amazonaws.com/cc3-frontend/front-end/index.html
+>https://s3.amazonaws.com/cc3-frontend/front-end/index.html (Deprecated)
 
 
 
